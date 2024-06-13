@@ -1,4 +1,4 @@
-import Order from '../../domain/aggregates/Orders.js';
+import Order from '../../domain/aggregates/Order.js';
 import OrderRepository from '../../infra/repositories/OrderRepository.js';
 import OrderPlaced from '../../domain/events/OrderPlaced.js';
 import EventStore from '../../infra/eventStore/EventStore.js';
