@@ -1,19 +1,19 @@
 class OrderRepository {
-    constructor() {
-        this.orders = new Map();
-    }
+  constructor() {
+    this.orders = new Map();
+  }
 
-    async save(order) {
-        this.orders.set(order.orderId, order);
-    }
+  async save(order) {
+    this.orders.set(order.orderId, order);
+  }
 
-    async get(orderId) {
-        return this.orders.get(orderId);
-    }
+  async get(orderId) {
+    return this.orders.get(orderId);
+  }
 
-    async getAll() {
-        return Array.from(this.orders.values());
-    }
+  async getAll() {
+    return Array.from(this.orders.values());
+  }
 }
 
 export default OrderRepository;

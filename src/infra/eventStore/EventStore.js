@@ -1,15 +1,15 @@
 class EventStore {
-    constructor() {
-        this.events = [];
-    }
+  constructor() {
+    this.events = [];
+  }
 
-    async saveEvent(event) {
-        this.events.push(event);
-    }
+  async saveEvent(event) {
+    this.events.push(event);
+  }
 
-    async getEvents() {
-        return this.events;
-    }
+  async getEvents() {
+    return this.events;
+  }
 }
 
 export default EventStore;

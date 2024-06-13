@@ -1,24 +1,24 @@
-import OrderRepository from '../../infra/repositories/OrderRepository.js';
-import OrderShipped from '../../domain/events/OrderShipped.js';
-import EventStore from '../../infra/eventStore/EventStore.js';
+import OrderRepository from "../../infra/repositories/OrderRepository.js";
+import OrderShipped from "../../domain/events/OrderShipped.js";
+import EventStore from "../../infra/eventStore/EventStore.js";
 
 class ShipOrderHandler {
-    async handle(command) {
-        const { orderId, address } = command;
-        
-        const orderRepository = new OrderRepository();
-        const order = await orderRepository.get(orderId);
+  async handle(command) {
+    const { orderId, address } = command;
 
-        order.shipOrder();
+    const orderRepository = new OrderRepository();
+    const order = await orderRepository.get(orderId);
 
-        const orderShippedEvent = new OrderShipped(orderId, address);
-        await orderRepository.save(order);
+    order.shipOrder();
 
-        const eventStore = new EventStore();
-        await eventStore.saveEvent(orderShippedEvent);
+    const orderShippedEvent = new OrderShipped(orderId, address);
+    await orderRepository.save(order);
 
-        return orderShippedEvent;
-    }
+    const eventStore = new EventStore();
+    await eventStore.saveEvent(orderShippedEvent);
+
+    return orderShippedEvent;
+  }
 }
 
 export default ShipOrderHandler;
