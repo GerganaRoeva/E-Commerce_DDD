@@ -1,0 +1,21 @@
+{
+  "name": "e-commerce_ddd",
+  "version": "1.0.0",
+  "description": "The primary goal of this assignment is to test your understanding and application of Domain-Driven Design (DDD), Command Query Responsibility Segregation (CQRS), and Event Sourcing (ES) in building a scalable and maintainable web application.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  },
+  "type": "module"
+
+}
