@@ -16,4 +16,4 @@ class OrderRepository {
     }
 }
 
-module.exports = OrderRepository;
+export default OrderRepository;

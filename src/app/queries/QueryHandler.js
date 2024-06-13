@@ -1,4 +1,4 @@
-const OrderRepository = require('../../infrastructure/repositories/OrderRepository');
+import OrderRepository from '../../infra/repositories/OrderRepository.js';
 
 class QueryHandler {
     async handleGetOrder(query) {
@@ -12,4 +12,4 @@ class QueryHandler {
     }
 }
 
-module.exports = QueryHandler;
+export default QueryHandler;

@@ -1,5 +1,5 @@
 import express from 'express';
-import { json } from 'body-parser';
+import json from 'body-parser';
 import commandRoutes from './api/commandRoutes.js';
 import queryRoutes from './api/queryRoutes.js';
 

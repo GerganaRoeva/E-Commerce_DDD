@@ -6,5 +6,5 @@ class OrderShipped {
     }
 }
 
-module.exports = OrderShipped;
+export default OrderShipped;
 

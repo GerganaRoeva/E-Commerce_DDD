@@ -1,6 +1,6 @@
-import OrderRepository from '../../infra/repositories/OrderRepository.js';
-import PaymentProcessed from '../../domain/events/PaymentProcessed.js';
-import EventStore from '../../infra/eventStore/EventStore.js';
+const OrderRepository = require('../../infrastructure/repositories/OrderRepository');
+const PaymentProcessed = require('../../domain/events/PaymentProcessed').default;
+const EventStore = require('../../infrastructure/eventStore/EventStore');
 
 class ProcessPaymentHandler {
     async handle(command) {
@@ -21,4 +21,4 @@ class ProcessPaymentHandler {
     }
 }
 
-export default ProcessPaymentHandler;
+module.exports = ProcessPaymentHandler;

@@ -4,4 +4,4 @@ class GetOrderQuery {
     }
 }
 
-module.exports = GetOrderQuery;
+export default GetOrderQuery;

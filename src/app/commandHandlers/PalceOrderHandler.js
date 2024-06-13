@@ -1,7 +1,7 @@
-const Order = require('../../domain/aggregates/Orders.js');
-const OrderRepository = require('../../infra/repositories/OrderRepository.js');
-const OrderPlaced = require('../../domain/events/OrderPlaced.js');
-const EventStore = require('../../infra/eventStore/EventStore.js');
+import Order from '../../domain/aggregates/Orders.js';
+import OrderRepository from '../../infra/repositories/OrderRepository.js';
+import OrderPlaced from '../../domain/events/OrderPlaced.js';
+import EventStore from '../../infra/eventStore/EventStore.js';
 
 class PlaceOrderHandler {
     async handle(command) {
@@ -19,4 +19,4 @@ class PlaceOrderHandler {
     }
 }
 
-module.exports = PlaceOrderHandler;
+export default PlaceOrderHandler;

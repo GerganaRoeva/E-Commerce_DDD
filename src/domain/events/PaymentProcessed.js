@@ -6,4 +6,4 @@ class PaymentProcessed {
     }
 }
 
-module.exports = PaymentProcessed;
+export default PaymentProcessed;

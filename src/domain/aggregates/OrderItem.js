@@ -6,4 +6,4 @@ class OrderItem {
     }
 }
 
-module.exports = OrderItem;
+export default OrderItem;

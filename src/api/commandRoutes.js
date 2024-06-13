@@ -1,8 +1,8 @@
 import express from 'express';
 import PlaceOrderHandler from '../app/commandHandlers/PalceOrderHandler.js';
-import ProcessPaymentHandler from './app/commandHandlers/ProcessPaymentHandler.js';
-import ShipOrderHandler from './app/commandHandlers/ShipOrderHandler.js';
-import PlaceOrderCommand from './app/commands/PlaceOrderCommand.js';
+import ProcessPaymentHandler from '../app/commandHandlers/ProcessPaymentHandler.js';
+import ShipOrderHandler from '../app/commandHandlers/ShipOrderHandler.js';
+import PlaceOrderCommand from '../app/commands/PlaceOrderCommand.js';
 import ProcessPaymentCommand from '../app/commands/ProcessPaymentCommand.js';
 import ShipOrderCommand from '../app/commands/ShipOrderCommand.js';
 

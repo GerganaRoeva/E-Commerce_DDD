@@ -1,6 +1,6 @@
-import OrderRepository from '../../infra/repositories/OrderRepository.js';
-import OrderShipped from '../../domain/events/OrderShipped.js';
-import EventStore from '../../infra/eventStore/EventStore.js';
+const OrderRepository = require('../../infrastructure/repositories/OrderRepository');
+const OrderShipped = require('../../domain/events/OrderShipped').default;
+const EventStore = require('../../infrastructure/eventStore/EventStore');
 
 class ShipOrderHandler {
     async handle(command) {
@@ -21,4 +21,4 @@ class ShipOrderHandler {
     }
 }
 
-export default ShipOrderHandler;
+module.exports = ShipOrderHandler;
